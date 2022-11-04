@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrolling Effects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#!" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#!" class="active">Home</a></li>
+            <li><a href="#!">About</a></li>
+            <li><a href="#!">Destination</a></li>
+            <li><a href="#!">Contact</a></li>
+        </ul>
+    </header>
+    
+    <section>
+        <h2 id="text">
+            <span>It's time for a new </span>
+            Subsrube
+        </h2>
+        <img src="img/bird1.png" id="bird1" alt="">
+        <img src="img/bird2.png" id="bird2" alt="">
+        <img src="img/forest.png" id="forest" alt="">
+        <a href="#!" id="btn">Explor</a>
+        <img src="img/rocks.png" id="rocks" alt="">
+        <img src="img/water.png" id="water" alt="">
+    </section>
+    
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sequi! Molestiae dicta dolorem similique facilis tempore obcaecati magnam repellendus animi voluptates sit. Rem, earum! Harum mollitia asperiores ea. Itaque officiis minus et id provident molestias quidem fugiat nobis. Nobis asperiores quaerat, repudiandae quam perferendis, aliquam omnis nulla, quo mollitia ut dolore. Possimus, quae ea. Molestiae officia ea adipisci minima voluptate ullam rerum expedita delectus molestias cupiditate eligendi impedit voluptatibus exercitationem vitae, tempore voluptas culpa soluta odit, temporibus alias vel similique mollitia. Porro reprehenderit nemo aliquam? Dolores odit ipsum veritatis perspiciatis molestiae error ea ullam aperiam itaque laborum recusandae, ab quae saepe ducimus, nemo quis! Distinctio ad animi ducimus blanditiis aperiam tenetur reprehenderit labore illo possimus? Praesentium eos sequi deleniti animi. Et fugit doloremque praesentium nihil eos amet nesciunt officiis minima facere ipsum obcaecati recusandae laboriosam omnis impedit, delectus fuga excepturi nostrum aliquam laborum, voluptatum repudiandae! Quo cumque distinctio et, omnis itaque, dicta excepturi quam ducimus molestiae rerum ab reiciendis vitae voluptate. Animi expedita distinctio fuga cum excepturi et commodi, asperiores repellat molestiae cupiditate vitae esse eos voluptatum pariatur necessitatibus eveniet ea. At accusamus laboriosam cupiditate, neque a dolor molestias optio libero eveniet, dignissimos suscipit voluptas! Rem ea tenetur atque aliquid alias illum voluptate necessitatibus adipisci eaque, temporibus doloribus explicabo quidem omnis fuga soluta corporis inventore aperiam quod deserunt a consectetur. Impedit, similique. Voluptate aperiam, possimus omnis deleniti ea similique molestias dolorum distinctio dicta corporis in expedita quibusdam aliquid at? Debitis, facere odit! Vero vitae impedit officiis repudiandae quibusdam dolorem esse, fuga molestias quisquam? Ea sunt quam iusto ab eius at ratione asperiores ipsa eum aut. Nemo dolorum adipisci nisi! Voluptates, cumque facere dolor est unde ullam. Earum dolorum temporibus sequi unde ipsum perferendis tempore qui optio, soluta ea magnam, illum, velit ut non praesentium sit libero ratione. Sint quod modi culpa. Et harum at itaque, iste perspiciatis fugiat iure, obcaecati cum doloribus excepturi, impedit praesentium architecto est culpa quas accusantium hic dolorum dolore veritatis eos minima! Fugiat, ratione? Omnis aspernatur ab eum soluta nisi rerum, facere maiores corporis quos, porro veritatis mollitia minus corrupti quo incidunt repudiandae aperiam deserunt quod? Ducimus sapiente ipsam laudantium consequatur totam quod eos aliquid dignissimos tenetur voluptatem neque earum non minima nihil, aliquam ipsa doloribus? Id itaque ipsum eveniet, similique obcaecati aliquam magnam quibusdam. Saepe consequatur fuga natus? Eum, tempore a fugiat quia, nemo porro animi nisi necessitatibus consequuntur saepe, voluptatibus ad nihil officia similique ducimus mollitia sapiente earum laudantium placeat repellat libero sint ullam qui. Odit, doloremque eaque. A adipisci ea sed veritatis exercitationem consequatur ex numquam sit, tenetur eius inventore pariatur incidunt eveniet ullam eligendi rerum. Accusamus debitis in voluptates deserunt, tempora iste nihil praesentium, magni quibusdam officia ipsum ut dolore autem excepturi. Inventore nesciunt sunt amet quod dolores dolorum consectetur, praesentium, nisi et earum ducimus ex nobis iure vel veritatis quos. Alias voluptate, voluptatem commodi ut culpa quidem! Error consequatur quam similique earum praesentium ea dicta, quia obcaecati doloremque nihil officiis ad ut culpa necessitatibus quidem! Nostrum, consequuntur eligendi? Non, sint sit.
+        </p>
+    </div>
+    
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+        
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            
+            text.style.top = 50 + value * -0.5 + '%';
+            
+            bird1.style.top = value * -1.5 + 'px';
+            
+            bird1.style.left = value * 2 + 'px';
+            
+            bird2.style.top = value * -1.5 + 'px';
+            
+            bird2.style.left = value * -5 + 'px';
+            
+            btn.style.marginTop = value * 1.5 + 'px';
+            
+            rocks.style.top = value * -0.12 + 'px';
+            
+            forest.style.top = value * 0.25 + 'px';
+            
+            header.style.top = value * -0.5 + 'px';
+        } )
+    </script>
+</body>
+</html>
